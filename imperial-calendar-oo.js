@@ -83,14 +83,14 @@ function ImperialCalendar(aDate) {
 		var theDiff = this.myStandardDate - theStart;
 		var theDay = Math.floor(theDiff / (1000 * 60 * 60 * 24));
 		
-		var theYearFraction = Math.ceil((theDay/365) * 1000);
+		var theYearFraction = Math.ceil((theDay/366) * 1000);
 		
 		//quick and dirty padding for our limited cases
 		if (theYearFraction < 10) {
 			theYearFraction = "00" + theYearFraction;
 		} else if (theYearFraction < 100) {
 			theYearFraction = "0" + theYearFraction;
-		} else if (theYear == 1000) {
+		} else if (theYearFraction == 1000) {
 			theYearFraction = "000";
 		}
 		
@@ -108,7 +108,7 @@ function ImperialCalendar(aDate) {
 		if (aWithSpaces == true) {
 			theImperialDate = this.myCheckNumber + " " + theYearFraction + " " + theYear + ".M" + theMillennium;
 		} else {
-			theImperialDate = this.myCheckNumber + theYearFraction + theYear + ".M" + theMillennium;
+			theImperialDate = this.myCheckNumber + "" + theYearFraction + "" + theYear + ".M" + theMillennium;
 		}
 		
 		return theImperialDate;

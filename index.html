@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Ave Imperator</title>
+	<script type="text/javascript" src="imperial-calendar-oo.js"></script>
+	<script type="text/javascript">	
+		function exampleUsage() {
+			var theGregorianDate = new Date();
+			var theImperialDate = new ImperialCalendar(theGregorianDate);
+			
+		    document.getElementById("greg1").innerHTML = theGregorianDate;
+            document.getElementById("imp1").innerHTML = theImperialDate.imperialDate(true);
+            
+            theGregorianDate = new Date(2001, 11, 31);
+            theImperialDate = new ImperialCalendar(theGregorianDate);
+            document.getElementById("greg2").innerHTML = theGregorianDate;
+            document.getElementById("imp2").innerHTML = theImperialDate.imperialDate(true);
+            
+            theGregorianDate = new Date(2001, 0, 1);
+            theImperialDate = new ImperialCalendar(theGregorianDate);
+            document.getElementById("greg3").innerHTML = theGregorianDate;
+            document.getElementById("imp3").innerHTML = theImperialDate.imperialDate(true);
+		    
+            theGregorianDate = new Date(2000, 11, 31);
+            theImperialDate = new ImperialCalendar(theGregorianDate);
+            document.getElementById("greg4").innerHTML = theGregorianDate;
+            document.getElementById("imp4").innerHTML = theImperialDate.imperialDate(true);
+            
+            theGregorianDate = new Date(2000, 0, 1);
+            theImperialDate = new ImperialCalendar(theGregorianDate);
+            document.getElementById("greg5").innerHTML = theGregorianDate;
+            document.getElementById("imp5").innerHTML = theImperialDate.imperialDate(true);
+            
+            theGregorianDate = new Date(40935, 1, 24);
+            theImperialDate = new ImperialCalendar(theGregorianDate);
+            document.getElementById("greg6").innerHTML = theGregorianDate;
+            document.getElementById("imp6").innerHTML = theImperialDate.imperialDate(true);
+	    }
+	    window.onload = exampleUsage;    
+	</script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Gregorian</td>
+            <td>Imperial</td>
+        </tr>
+        <tr>
+            <td id="greg1"></td>
+            <td id="imp1"></td>
+        </tr>
+        <tr>
+            <td id="greg2"></td>
+            <td id="imp2"></td>
+        </tr>
+        <tr>
+            <td id="greg3"></td>
+            <td id="imp3"></td>
+        </tr>
+        <tr>
+            <td id="greg4"></td>
+            <td id="imp4"></td>
+        </tr>
+        <tr>
+            <td id="greg5"></td>
+            <td id="imp5"></td>
+        </tr>
+        <tr>
+            <td id="greg6"></td>
+            <td id="imp6"></td>
+        </tr>
+    </table>
+</body>
+</html>
