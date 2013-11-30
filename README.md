@@ -51,7 +51,8 @@ If you are on the International Space Station you could use:
 theImperialDate.setCheckNumber(1);
 console.log( theImperialDate.imperialDate(true) ); //results in: 1 910 013.M3
 
-//The single function version, you can pass a check number as the third parameter, a style value as the second parameter like before, and of course date being the first.
+//The single function version, you can pass a check number as the third parameter, 
+//a style value as the second parameter like before, and of course date being the first.
 var theGregorianDate = new Date(2013, 10, 29);
 var theImperialDate = imperialCalendar(theGregorianDate, true, 1);
 console.log( theImperialDate ); //results in: 1 910 013.M3
