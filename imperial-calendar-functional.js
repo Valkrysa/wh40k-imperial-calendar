@@ -15,7 +15,7 @@ function imperialCalendar(aDate, aWithSpaces, aCheckNumber) {
 	
 	var theCheckNumber = (typeof aCheckNumber !== 'undefined') ? aCheckNumber : 0
 	
-	if !( theCheckNumber >= 0 && theCheckNumber <= 9 ) {
+	if (!( theCheckNumber >= 0 && theCheckNumber <= 9 )) {
 		theCheckNumber = 0;
 	}
 	
