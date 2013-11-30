@@ -3,6 +3,8 @@ wh40k-imperial-calendar
 
 This can be used to convert dates and times into the Imperial Dating System found in the Warhammer 40k Universe.
 
+Live example can be viewed at: http://www.melodioustech.com/40k-imperial-calendar
+
 #### Usage
 
 If you want to use the Object Oriented version use imperial-calendar.js
