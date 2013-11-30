@@ -5,8 +5,8 @@ This can be used to convert dates and times into the Imperial Dating System foun
 
 #### Usage
 
-If you want to use the Object Oriented version use imperial-calendar-oo.js
-A single function version is available in imperial-calendar.js
+If you want to use the Object Oriented version use imperial-calendar.js
+A single function version is available in imperial-calendar-functional.js
 
 Basic usage. Uses the current date.
 `
