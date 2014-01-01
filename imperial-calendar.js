@@ -82,8 +82,14 @@ function ImperialCalendar(aDate) {
 		var theStart = new Date(this.myStandardDate.getFullYear(), 0, 0);
 		var theDiff = this.myStandardDate - theStart;
 		var theDay = Math.floor(theDiff / (1000 * 60 * 60 * 24));
+		var theDaysInYear = 365;
 		
-		var theYearFraction = Math.ceil((theDay/366) * 1000);
+		var isLeap = new Date(this.myStandardDate.getFullYear(), 1, 29).getMonth() == 1
+		if (isLeap) {
+			theDaysInYear = 366;
+		}
+		
+		var theYearFraction = Math.ceil((theDay/theDaysInYear) * 1000);
 		
 		//quick and dirty padding for our limited cases
 		if (theYearFraction < 10) {
