@@ -78,19 +78,47 @@ function ImperialCalendar(aDate) {
 		aWithSpaces = (typeof aWithSpaces !== 'undefined') ? aWithSpaces : false;
 		
 		var theImperialDate = "";
-		
+	
+	// The gets the hours, minutes and seconds of the current date
+
+		var currentDate = new Date();
+		var currentHour = currentDate.getHours();
+		var currentMinute = currentDate.getMinutes();
+		var currentSecond = currentDate.getSeconds();
+
+	// This calculates what day of the year we're at
+
 		var theStart = new Date(this.myStandardDate.getFullYear(), 0, 0);
 		var theDiff = this.myStandardDate - theStart;
 		var theDay = Math.floor(theDiff / (1000 * 60 * 60 * 24));
-		var theDaysInYear = 365;
+
+	// Here we're getting the current elapsed seconds in the year for the days, hours and minutes
+	// Substracting one day's worth of seconds to make the date start counting at zero
+
+		var days = (theDay * 86400) - 86400
+		var hours = currentHour * 3600
+		var minutes = currentMinute * 60
+
+
+	// There are this many seconds in a year
+
+		var secondsInYear = 31536000;
+	
+
+	// Figure out if we have a leap year and change seconds in a year accordingly
 		
 		var isLeap = new Date(this.myStandardDate.getFullYear(), 1, 29).getMonth() == 1
 		if (isLeap) {
-			theDaysInYear = 366;
+			secondsInYear = 31622400;
 		}
 		
-		var theYearFraction = Math.ceil((theDay/theDaysInYear) * 1000);
-		
+	
+	// Add all the currently elapsed seconds together, divide by seconds in the year
+	// Then multiply by a thousand and round it all down to get the current year fraction
+
+		var theYearFraction = Math.floor(((days + hours + minutes + currentSecond) / secondsInYear) * 1000);
+
+
 		//quick and dirty padding for our limited cases
 		if (theYearFraction < 10) {
 			theYearFraction = "00" + theYearFraction;
