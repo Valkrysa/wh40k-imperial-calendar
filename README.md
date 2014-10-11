@@ -5,7 +5,7 @@ Edit 2014-01-01: Precision has been improved to the second as of the latest chan
 
 This can be used to convert dates and times into the Imperial Dating System found in the Warhammer 40k Universe.
 
-Live example can be viewed at: http://www.melodioustech.com/40k-imperial-calendar
+Live example can be viewed at: http://tech.valkrysa.com/40k-imperial-calendar
 
 #### Usage
 
